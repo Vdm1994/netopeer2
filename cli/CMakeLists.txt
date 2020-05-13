@@ -15,6 +15,9 @@ set(CLI_SRC
     configuration.c
     linenoise/linenoise.c)
 
+# link compat
+use_compat()
+
 # netopeer2-cli target
 add_executable(netopeer2-cli ${CLI_SRC} $<TARGET_OBJECTS:compat>)
 
