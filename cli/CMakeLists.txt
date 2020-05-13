@@ -19,7 +19,7 @@ set(CLI_SRC
 # use_compat()
 
 # netopeer2-cli target
-add_executable(netopeer2-cli ${CLI_SRC} $<TARGET_OBJECTS>)
+add_executable(netopeer2-cli ${CLI_SRC} $<TARGET_OBJECTS:compat>)
 
 # reuse server variables
 target_link_libraries(netopeer2-cli ${CMAKE_THREAD_LIBS_INIT})
